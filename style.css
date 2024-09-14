@@ -1,0 +1,462 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Fixed Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Logo */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Header Menu */
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+    color: #ffeb3b;
+}
+
+/* Sub-Menu Styles */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    list-style: none;
+    width: 200px; /* Adjust width as needed */
+}
+
+.sub-menu li {
+    margin: 0;
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.sub-menu li a:hover {
+    background-color: #555;
+}
+
+/* Show Sub-Menu on Hover */
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+/* Header Search and Login */
+.search-login {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-login input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-login a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffeb3b;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-login a:hover {
+    background-color: #fdd835;
+}
+
+/* Main Section Padding Adjustment */
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+.hero-text a {
+    display: block;
+    font-size: 36px;
+    text-decoration: none;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+}
+
+.hero-text input {
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Holiday Outfit Section */
+.holiday-outfit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #e0e0e0;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.holiday-outfit img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.holiday-text {
+    padding: 20px;
+}
+
+.holiday-text h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* New Arrivals Section */
+.new-arrivals {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.new-arrivals h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    text-align: center;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product p {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.product span {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .hero-text a {
+        font-size: 28px;
+    }
+
+    .hero-text input {
+        width: 150px;
+        height: 50px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+    }
+
+    .search-login {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero-text a {
+        font-size: 22px;
+    }
+
+    .hero-text input {
+        width: 120px;
+        height: 40px;
+    }
+
+    .holiday-outfit img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .holiday-text h2 {
+        font-size: 28px;
+    }
+
+    .product {
+        width: 220px;
+    }
+
+    .new-arrivals h2 {
+        font-size: 26px;
+    }
+}
+
+/* Cart Section */
+.cart-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.cart-total {
+    margin-top: 10px;
+}
+
+.cart-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Sorting Section */
+.sorting-section {
+    margin-top: 20px;
+}
+
+.sorting-section button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sorting-section button:hover {
+    background-color: #555;
+}
+
+/* Cart Icon Styles */
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
+/* Cart Item Design */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.quantity-btn {
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+.quantity-btn:hover {
+    background-color: #555;
+}
+
+/* Hover effect for the cart icon */
+.cart-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
